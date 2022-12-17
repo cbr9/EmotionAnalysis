@@ -1,3 +1,11 @@
+.transformers/
+outputs/
+multirun/
+*.json
+**.tsv
+**.csv
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
