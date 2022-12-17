@@ -1,0 +1,18 @@
+_target_: src.dataset.EmotionDataModule
+df:
+  _target_: pandas.read_csv
+  filepath_or_buffer: /mount/studenten-temp1/users/caberoas/emotion_analysis/conf/dataset/tec.tsv
+  sep: "\t"
+  encoding: utf8
+hf_checkpoint: ${model.hf_checkpoint}
+batch_size: 198
+train_size: 0.6
+replace_mentions: ""
+val_size: 0.2
+max_input_length: 192
+num_workers: 8
+remove_hashtags: false
+pin_memory: true
+sampler: 
+  _target_: torch.utils.data.RandomSampler
+  _partial_: true

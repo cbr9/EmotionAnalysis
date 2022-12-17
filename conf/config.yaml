@@ -1,0 +1,18 @@
+defaults:
+  # - trainer: trainer
+  - model: model
+  - dataset: ???
+
+trainer:
+ _target_: pytorch_lightning.Trainer
+ accelerator: gpu
+ max_epochs: 10
+ auto_scale_batch_size: binsearch
+ auto_lr_find: true
+ logger:
+  _target_: pytorch_lightning.loggers.CSVLogger
+  save_dir: logs
+
+hydra:
+  job:
+    chdir: true

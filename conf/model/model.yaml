@@ -1,0 +1,6 @@
+defaults: 
+  - optimizer: ???
+
+_target_: src.model.EmotionModel
+hf_checkpoint: ???
+lr: 2e-5
